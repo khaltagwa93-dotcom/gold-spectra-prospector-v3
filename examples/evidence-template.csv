@@ -1,0 +1,4 @@
+latitude,longitude,factor,strength,confidence,label
+19.7000,35.3000,alteration,3,3,Alteration evidence
+19.7200,35.3300,structure,4,4,Fault evidence
+19.7500,35.3500,geochemistry,5,4,Geochemical anomaly
