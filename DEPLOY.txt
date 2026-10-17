@@ -1,0 +1,30 @@
+GOLD SPECTRA PROSPECTOR — V3.0 ML LAB
+
+DEPLOY TO VERCEL
+1. Extract the ZIP archive.
+2. Upload the project root contents to GitHub. Keep index.html, vercel.json,
+   package.json, app.js, analysis-worker.js, ml-worker.js, styles.css and api/ at root.
+3. Import the repository in Vercel > Add New > Project.
+4. Framework Preset: Other.
+5. Leave Build Command empty. Output Directory: . (or keep Vercel's static default).
+6. No API keys or environment variables are required. Deploy.
+
+Live features use Vercel functions:
+  /api/scenes        Sentinel-2 STAC search
+  /api/raster-proxy  signed COG range reads
+  /api/occurrences   USGS selected major gold-deposit reference lookup
+
+TRAINING
+The local Random Forest lab needs a Sentinel-2 scene with eight bands and at least
+five distinct, documented gold occurrence points inside the scene. More points are
+strongly preferred. Background samples are pseudo-absence, not proven negative sites.
+The map score is relative similarity, not a calibrated gold probability.
+
+TESTS
+  npm run check
+
+CLI deployment
+  npx vercel
+  npx vercel --prod
+
+Read README.md for workflow, scientific limitations, data sources and validation notes.
