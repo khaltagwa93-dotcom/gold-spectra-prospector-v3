@@ -1,0 +1,9 @@
+{
+  "name": "gold-spectra-prospector",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Arabic satellite-assisted mineral prospectivity mapping tool with local Random Forest training for Vercel",
+  "scripts": {
+    "check": "node --check app.js && node --check analysis-worker.js && node --check api/scenes.js && node --check api/raster-proxy.js && node --check api/occurrences.js && node --check ml-worker.js && node tests/smoke.test.js"
+  }
+}
